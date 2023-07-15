@@ -127,7 +127,18 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="colas.cpp" />
+    <ClCompile Include="interfaz.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="optimo.cpp" />
+    <ClCompile Include="pilas.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="colas.h" />
+    <ClInclude Include="interfaz.h" />
+    <ClInclude Include="optimo.h" />
+    <ClInclude Include="pilas.h" />
+    <ClInclude Include="std.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
