@@ -12,7 +12,7 @@ int main()
 	_interfaz.pantallaTitulo();
 
 	// Llamado al metodo del menú principal
-	_interfaz.menuPrincipal();
+
 
 	return 0;
 }
