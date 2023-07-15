@@ -11,8 +11,8 @@ int main()
 	// Llamado al metodo de la pantalla de bienvenida
 	_interfaz.pantallaTitulo();
 
-	// Llamado al metodo del menú principal
-
+	// Llamado al metodo del menú principal 5
+	_interfaz.menuPrincipal();
 
 	return 0;
 }
