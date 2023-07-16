@@ -1,6 +1,15 @@
-#include "std.h"
+#include <stack>
+#include <iostream>
 
-class pilas
-{
+using namespace std;
+
+class pilas {
+public:
+	void agregarNum(const int&);
+	void eliminarNum();
+	void mostrarNum();
+	bool estaVacia();
+
+private:
+	stack<int> pila;
 };
-

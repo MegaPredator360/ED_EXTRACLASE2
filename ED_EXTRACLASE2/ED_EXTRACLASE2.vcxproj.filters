@@ -30,6 +30,12 @@
     <ClCompile Include="optimo.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="procedimientos.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="metodosInterface.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="interfaz.h">
@@ -45,6 +51,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="optimo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="procedimientos.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="metodosInterface.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

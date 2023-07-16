@@ -130,14 +130,18 @@
     <ClCompile Include="colas.cpp" />
     <ClCompile Include="interfaz.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="metodosInterface.cpp" />
     <ClCompile Include="optimo.cpp" />
     <ClCompile Include="pilas.cpp" />
+    <ClCompile Include="procedimientos.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="colas.h" />
     <ClInclude Include="interfaz.h" />
+    <ClInclude Include="metodosInterface.h" />
     <ClInclude Include="optimo.h" />
     <ClInclude Include="pilas.h" />
+    <ClInclude Include="procedimientos.h" />
     <ClInclude Include="std.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

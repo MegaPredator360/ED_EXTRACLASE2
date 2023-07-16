@@ -9,9 +9,9 @@ int main()
 	interfaz _interfaz;
 
 	// Llamado al metodo de la pantalla de bienvenida
-	_interfaz.pantallaTitulo();
+	//_interfaz.pantallaTitulo();
 
-	// Llamado al metodo del menú principal 5
+	// Llamado al metodo del men? principal
 	_interfaz.menuPrincipal();
 
 	return 0;
