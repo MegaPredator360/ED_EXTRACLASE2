@@ -9,6 +9,7 @@ private:
 	// Llamados a clases
 	colas _cola;
 	pilas _pila;
+	optimo _optimo;
 	metodosProcedimientos _metodosProcedimiento;
 
 public:
@@ -20,5 +21,8 @@ public:
 
 	// Metodo para hacer el proceso de page-faults en pilas
 	int pageFaultsLIFO(int*, int);
+
+	// Metodo para hacer el proceso de page-faults en colas (optimo)
+	int optimalPage(int*, int);
 };
 

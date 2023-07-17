@@ -1,23 +1,20 @@
 #include "procedimientos.h"
 
-int* procedimientos::agregarSecuencia(string secuencia)
-{
-	try
-	{
+int* procedimientos::agregarSecuencia(string secuencia) {
+	try {
 		int numero = 0;
 
-		// Se obtendrá la cantidad de numeros de la secuencia
+		// Se obtendrï¿½ la cantidad de numeros de la secuencia
 		int cantidadDigitos = _metodosProcedimiento.cantidadNumeros(secuencia);
 
 		// Definimos e inicializamos en array de int en forma de puntero
 		int* secuenciaNueva = new int[cantidadDigitos];
 		
-		for (int i = 0; i < cantidadDigitos; i++)
-		{
-			// Asignará el número hasta encontrar un "espacio"
+		for (int i = 0; i < cantidadDigitos; i++) {
+			// Asignarï¿½ el nï¿½mero hasta encontrar un "espacio"
 			numero = stoi(secuencia.substr(0, secuencia.find(" ")));
 
-			// Borrará el número encontrado de la secuencia para ingresar el siguiente número
+			// Borrarï¿½ el nï¿½mero encontrado de la secuencia para ingresar el siguiente nï¿½mero
 			secuencia.erase(0, _metodosProcedimiento.cantidadString(to_string(numero)) + 1);
 
 			// Ingresamos el valor en el array
@@ -25,16 +22,13 @@ int* procedimientos::agregarSecuencia(string secuencia)
 		}
 		return secuenciaNueva;
 	}
-	catch (exception& e)
-	{
+	catch (exception& e) {
 		throw e;
 	}
 }
 
-int procedimientos::pageFaultsFIFO(int* secuencia, int marcos)
-{
-    try
-    {
+int procedimientos::pageFaultsFIFO(int* secuencia, int marcos) {
+    try {
         cout << endl << "Marcos en FIFO:" << endl;
 
         // Para ver la cantidad de paginas actuales se hace uso de "unordered_set"
@@ -44,22 +38,16 @@ int procedimientos::pageFaultsFIFO(int* secuencia, int marcos)
         // Se declara y se inicializa la cantidad de "page-faults"
         int page_faults = 0;
 
-        // Se obtendrá el tamaño del array
+        // Se obtendrï¿½ el tamaï¿½o del array
         int t = 0;
-        while (secuencia[t] >= 0)
-        {
-            t++;
-        }
+        while (secuencia[t] >= 0) { t++; }
 
-        for (int i = 0; i < t; i++)
-        {
+        for (int i = 0; i < t; i++) {
             // Revisa si el marco puede contener la cantidad de digitos
-            if (s.size() < marcos)
-            {
-                // El digito se insertará en el set, si el digito no
-                // esta presente, representará un page-fault
-                if (s.find(secuencia[i]) == s.end())
-                {
+            if (s.size() < marcos) {
+                // El digito se insertarï¿½ en el set, si el digito no
+                // esta presente, representarï¿½ un page-fault
+                if (s.find(secuencia[i]) == s.end()) {
                     // Se inserta el digito actual en el set
                     s.insert(secuencia[i]);
 
@@ -70,34 +58,30 @@ int procedimientos::pageFaultsFIFO(int* secuencia, int marcos)
                     _cola.agregarNum(secuencia[i]);
                 }
             }
-
-            // Si el set no está completo, se realizará el FIFO
-            else
-            {
+            // Si el set no estï¿½ completo, se realizarï¿½ el FIFO
+            else {
                 // Revisa si el digito esta presente en el set actual
-                if (s.find(secuencia[i]) == s.end())
-                {
+                if (s.find(secuencia[i]) == s.end()) {
                     // Imprimir los marcos
-                    for (int num : s)
-                    {
+                    for (int num : s) {
                         cout << num << " ";
                     }
                     cout << endl;
 
-                    // Almacenará el primer digito en la cola para ser usado para
+                    // Almacenarï¿½ el primer digito en la cola para ser usado para
                     // encontrar y borrar el digito del set
                     int val = _cola.obtenerPrimerNum();
 
-                    // Borrará el primer digito de la cola
+                    // Borrarï¿½ el primer digito de la cola
                     _cola.eliminarNum();
 
-                    // Se borrará el digito del set
+                    // Se borrarï¿½ el digito del set
                     s.erase(val);
 
-                    // Insertará el digito actual en el set
+                    // Insertarï¿½ el digito actual en el set
                     s.insert(secuencia[i]);
 
-                    // Insertará los digitos actuales del marco en la cola
+                    // Insertarï¿½ los digitos actuales del marco en la cola
                     _cola.agregarNum(secuencia[i]);
 
                     // Se incrementa el contador de "page-faults"
@@ -105,18 +89,14 @@ int procedimientos::pageFaultsFIFO(int* secuencia, int marcos)
                 }
             }
         }
-
         // Imprimir el ultimo marco
-        for (int num : s)
-        {
+        for (int num : s) {
             cout << num << " ";
         }
         cout << endl;
-
         return page_faults;
     }
-    catch (exception& e)
-    {
+    catch (exception& e) {
         throw e;
     }
 }
@@ -134,7 +114,7 @@ int procedimientos::pageFaultsLIFO(int* secuencia, int marcos)
         // Se declara y se inicializa la cantidad de "page-faults"
         int page_faults = 0;
 
-        // Se obtendrá el tamaño del array
+        // Se obtendrï¿½ el tamaï¿½o del array
         int t = 0;
         while (secuencia[t] >= 0)
         {
@@ -146,8 +126,8 @@ int procedimientos::pageFaultsLIFO(int* secuencia, int marcos)
             // Revisa si el marco puede contener la cantidad de digitos
             if (s.size() < marcos)
             {
-                // El digito se insertará en el set, si el digito no
-                // esta presente, representará un page-fault
+                // El digito se insertarï¿½ en el set, si el digito no
+                // esta presente, representarï¿½ un page-fault
                 if (s.find(secuencia[i]) == s.end())
                 {
                     // Se inserta el digito actual en el set
@@ -161,7 +141,7 @@ int procedimientos::pageFaultsLIFO(int* secuencia, int marcos)
                 }
             }
 
-            // Si el set no está completo, se realizará el LIFO
+            // Si el set no estï¿½ completo, se realizarï¿½ el LIFO
             else
             {
                 // Revisa si el digito esta presente en el set actual
@@ -174,20 +154,20 @@ int procedimientos::pageFaultsLIFO(int* secuencia, int marcos)
                     }
                     cout << endl;
 
-                    // Almacenará el primer digito en la pila para ser usado para
+                    // Almacenarï¿½ el primer digito en la pila para ser usado para
                     // encontrar y borrar el digito del set
                     int val = _pila.obtenerPrimerNum();
 
-                    // Borrará el primer digito de la pila
+                    // Borrarï¿½ el primer digito de la pila
                     _pila.eliminarNum();
 
-                    // Se borrará el digito del set
+                    // Se borrarï¿½ el digito del set
                     s.erase(val);
 
-                    // Insertará el digito actual en el set
+                    // Insertarï¿½ el digito actual en el set
                     s.insert(secuencia[i]);
 
-                    // Insertará los digitos actuales del marco en la pila
+                    // Insertarï¿½ los digitos actuales del marco en la pila
                     _pila.agregarNum(secuencia[i]);
 
                     // Se incrementa el contador de "page-faults"
@@ -197,6 +177,96 @@ int procedimientos::pageFaultsLIFO(int* secuencia, int marcos)
         }
 
         // Imprime el ultimo marco
+        for (int num : s)
+        {
+            cout << num << " ";
+        }
+        cout << endl;
+
+        return page_faults;
+    }
+    catch (exception& e)
+    {
+        throw e;
+    }
+}
+
+
+int procedimientos::optimalPage(int* secuencia, int marcos) {
+    try
+    {
+        cout << endl << "Marcos en Ã“PTIMO:" << endl;
+
+        // Para ver la cantidad de paginas actuales se hace uso de "unordered_set"
+        // para poder revisar rapidamente si el digito esta presente o no
+        unordered_set<int> s;
+
+        // Se declara y se inicializa la cantidad de "page-faults"
+        int page_faults = 0;
+
+        // Se obtendrï¿½ el tamaï¿½o del array
+        int t = 0;
+        while (secuencia[t] >= 0)
+        {
+            t++;
+        }
+
+        for (int i = 0; i < t; i++)
+        {
+            // Revisa si el marco puede contener la cantidad de digitos
+            if (s.size() < marcos)
+            {
+                // El digito se insertarï¿½ en el set, si el digito no
+                // esta presente, representarï¿½ un page-fault
+                if (s.find(secuencia[i]) == s.end())
+                {
+                    // Se inserta el digito actual en el set
+                    s.insert(secuencia[i]);
+
+                    // Se incrementa el contador de "page-faults"
+                    page_faults++;
+
+                    // Se inserta la cantidad actual de digitos en la cola
+                    _optimo.agregarNum(secuencia[i]);
+                }
+            }
+
+            // Si el set no estï¿½ completo, se realizarï¿½ el OPTIMO
+            else
+            {
+                // Revisa si el digito esta presente en el set actual
+                if (s.find(secuencia[i]) == s.end())
+                {
+                    // Imprimir los marcos
+                    for (int num : s)
+                    {
+                        cout << num << " ";
+                    }
+                    cout << endl;
+
+                    // Almacenarï¿½ el primer digito en la cola para ser usado para
+                    // encontrar y borrar el digito del set
+                    int val = _optimo.obtenerPrimerNum();
+
+                    // Borrarï¿½ el primer digito de la cola
+                    _optimo.eliminarNum();
+
+                    // Se borrarï¿½ el digito del set
+                    s.erase(val);
+
+                    // Insertarï¿½ el digito actual en el set
+                    s.insert(secuencia[i]);
+
+                    // Insertarï¿½ los digitos actuales del marco en la cola
+                    _optimo.agregarNum(secuencia[i]);
+
+                    // Se incrementa el contador de "page-faults"
+                    page_faults++;
+                }
+            }
+        }
+
+        // Imprimir el ultimo marco
         for (int num : s)
         {
             cout << num << " ";

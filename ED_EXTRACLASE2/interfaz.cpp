@@ -1,6 +1,6 @@
 #include "interfaz.h"
 
-// Mostrará una pantalla de bienvenida al inicio del programa
+// Mostrarï¿½ una pantalla de bienvenida al inicio del programa
 void interfaz::pantallaTitulo()
 {
 	cout << endl << endl;
@@ -17,9 +17,9 @@ void interfaz::pantallaTitulo()
 	cout << "                           |_|\\__,_|_|  \\___|\\__,_| |_|   |_|_|\\__,_|___/ /_/     \\____\\___/|_|\\__,_|___/" << endl;
 	cout << endl << endl;
 	cout << "						Realizado por:" << endl;
-	cout << "					  Aaron Steve Alfaro Zamora" << endl;
+	cout << "					   Aaron Steve Alfaro Zamora" << endl;
 	cout << "					 Maria Stephanie Araya Solano" << endl;
-	cout << "					 Michelle José Arrieta Zamora" << endl;
+	cout << "					 Michelle Josï¿½ Arrieta Zamora" << endl;
 	cout << "					     Keilyn Morera Vargas" << endl;
 	cout << endl;
 	system("pause");
@@ -27,29 +27,29 @@ void interfaz::pantallaTitulo()
 
 void interfaz::color(int color)
 {
-	// Obtendrá el codigo de color para la consola
+	// Obtendrï¿½ el codigo de color para la consola
 	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), color);
 }
 
 void interfaz::goToXY(int x, int y)
 {
-	// Este tipo de dato indica las coordenadas de donde se escribirá el texto
+	// Este tipo de dato indica las coordenadas de donde se escribirï¿½ el texto
 	COORD c;
 	c.X = x;
 	c.Y = y;
 	SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), c);
 }
 
-// Mostrará el menú principal del programa
+// Mostrarï¿½ el menï¿½ principal del programa
 void interfaz::menuPrincipal()
 {
 	// Llamado a la clase de metodos creados exclusivamente para la interface
 	metodosInterface _metodosInterface;
 	procedimientos _procedimientos;
 
-	int counter = 1;				// Contador para averiguar la opción seleccionada
+	int counter = 1;				// Contador para averiguar la opciï¿½n seleccionada
 	int Set[] = { 7, 7, 7, 7 };		// Se coloca a todas las opciones con el color por defecto
-	Set[0] = 23;					// Colocar la primera opcíon como seleccionada
+	Set[0] = 23;					// Colocar la primera opcï¿½on como seleccionada
 	int key = 0;					// Encargada de recibir el valor de la tecla pulsada en ASCII
 
 	while (1)
@@ -58,20 +58,20 @@ void interfaz::menuPrincipal()
 		
 		cout << endl;
 		cout << "		[]------------------------------------------[]" << endl;
-		cout << "		|                Menú Principal              |" << endl;
+		cout << "		|                Menï¿½ Principal              |" << endl;
 		cout << "		[]------------------------------------------[]" << endl;
 		cout << "		|                                            |" << endl;
-		cout << "		|           Selecciona una opción:           |" << endl;
+		cout << "		|           Selecciona una opciï¿½n:           |" << endl;
 		cout << "		|                                            |" << endl;
 		cout << "		|";
 
 		for (int i = 0;;)
 		{
-			// Indica la posicion de donde se escribirá el texto
+			// Indica la posicion de donde se escribirï¿½ el texto
 			goToXY(28, 7);
-			// Inidicará el color a ingresar marcar si la opcion es seleccionada
+			// Inidicarï¿½ el color a ingresar marcar si la opcion es seleccionada
 			color(Set[0]);
-			// Texto de la opción
+			// Texto de la opciï¿½n
 			cout << "Realizar Procedimiento";
 
 			cout << WHITE << "	     |" << endl;
@@ -127,21 +127,21 @@ void interfaz::menuPrincipal()
 							cout << "		[]--------------------------------------------[]" << endl;
 							cout << endl;
 
-							cout << "Ingresa la secuencia de números: " << YELLOW << "(Cada número deberá de ser separado por un espacio)" << WHITE << endl;
+							cout << "Ingresa la secuencia de nÃºmeros: " << YELLOW << "(Cada nï¿½mero deberï¿½ de ser separado por un espacio)" << WHITE << endl;
 							secuencia = _metodosInterface.ingresarSecuenciaNumeros();
 
 							cout << endl << "Ingresa la cantidad de marcos de pagina:" << endl;
 							cantidadMarcos = stoi(_metodosInterface.ingresarNumeros());
 
 							cout << "----------------------------------------" << endl;
-							cout << "¿Los datos ingresados son correctos? [S/n]" << endl;
+							cout << "ï¿½Los datos ingresados son correctos? [S/n]" << endl;
 							confirmacion = _metodosInterface.confirmacionDefS();
 						}
 
 						_metodosInterface.pageFaults(_procedimientos.agregarSecuencia(secuencia), cantidadMarcos);
 
 						cout << "----------------------------------------" << endl;
-						cout << GREEN << "¡La secuencia de números a sido ingresada con exito!" << WHITE << endl;
+						cout << GREEN << "ï¿½La secuencia de nï¿½meros a sido ingresada con exito!" << WHITE << endl;
 						system("pause");
 					}
 					catch (exception& e) {
@@ -165,13 +165,13 @@ void interfaz::menuPrincipal()
 						cout << "		[]--------------------------------------------[]" << endl;
 						cout << endl;
 
-						cout << "¿Deseas salir del programa? [S/n]" << endl;
+						cout << "ï¿½Deseas salir del programa? [S/n]" << endl;
 						confirmacion = _metodosInterface.confirmacionDefS();
 
 						if (confirmacion == "S")
 						{
 							cout << "-----------------------------------" << endl;
-							cout << GREEN << "¡Gracias por usar el programa!" << WHITE << endl;
+							cout << GREEN << "ï¿½Gracias por usar el programa!" << WHITE << endl;
 							system("pause");
 							exit(0);
 						}
@@ -201,8 +201,8 @@ void interfaz::menuPrincipal()
 			switch (counter)
 			{
 			case 1:
-				// Se indica el codigo de color con el que se usará en el texto
-				// si la opción está seleccionada
+				// Se indica el codigo de color con el que se usarï¿½ en el texto
+				// si la opciï¿½n estï¿½ seleccionada
 				Set[0] = 23;
 				break;
 

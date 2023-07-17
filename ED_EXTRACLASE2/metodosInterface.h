@@ -6,17 +6,16 @@ protected:
 	procedimientos _procedimientos;
 
 public:
-	// Metodo para que el usuario solo pueda ingresar números
+	// Metodo para que el usuario solo pueda ingresar nï¿½meros
 	string ingresarNumeros();
 
-	// Metodo para ingresar una sequencia de números
+	// Metodo para ingresar una sequencia de nï¿½meros
 	string ingresarSecuenciaNumeros();
 
 	// Metodo para confirmacion de Si o No
-	// La opción por defecto de este metodo es Si
+	// La opciï¿½n por defecto de este metodo es Si
 	string confirmacionDefS();
 
 	// Metodo para llamar a los metodos encargados de realizar los page-fault
 	void pageFaults(int*, int);
 };
-

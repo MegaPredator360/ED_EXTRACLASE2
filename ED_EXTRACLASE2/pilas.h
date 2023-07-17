@@ -5,10 +5,10 @@ public:
 	// Se agregar los elementos a la pila
 	void agregarNum(const int&);
 
-	// Contará la cantidad de elementos ingresados en la pila
+	// Contarï¿½ la cantidad de elementos ingresados en la pila
 	int cantidadNum();
 
-	// Obtendrá el elemento en la primera posición de la pila
+	// Obtendrï¿½ el elemento en la primera posiciï¿½n de la pila
 	int obtenerPrimerNum();
 
 	// Se elimina el elemento de la pila
