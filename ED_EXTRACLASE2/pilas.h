@@ -1,7 +1,4 @@
-#include <stack>
-#include <iostream>
-
-using namespace std;
+#include "std.h"
 
 class pilas {
 public:
