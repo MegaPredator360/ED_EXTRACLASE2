@@ -60,7 +60,11 @@ string metodosInterface::ingresarSecuenciaNumeros()
 		}
 		else if (asciiChar == 32)					// Verificará si la tecla "espacio" fue pulsada
 		{
-			if (num.back() == ' ')					// Si el ultimo caracter es un "espacio" no ingresará otro hasta que ingrese un nuevo digito
+			if (num == "")							// Verificará si espacio no tiene digitos
+			{
+				PlaySound(TEXT("SystemStart"), NULL, SND_ALIAS | SND_ASYNC);
+			}
+			else if (num.back() == ' ')				// Si el ultimo caracter es un "espacio" no ingresará otro hasta que ingrese un nuevo digito
 			{
 				PlaySound(TEXT("SystemStart"), NULL, SND_ALIAS | SND_ASYNC);
 			}
@@ -99,7 +103,7 @@ string metodosInterface::ingresarSecuenciaNumeros()
 	return (num);
 }
 
-string metodosInterface::confirmacionDefS()			// Utiliza la misma estructura que el de solo aceptarNumeros()
+string metodosInterface::confirmacionDefS()			// Utiliza la misma estructura que el de solo ingresarNumeros()
 {
 	int asciiChar = 0;
 	string letra = "";
@@ -154,4 +158,13 @@ string metodosInterface::confirmacionDefS()			// Utiliza la misma estructura que
 	} while (1);
 
 	return (letra);
+}
+
+void metodosInterface::pageFaults(int* secuencia, int marcos)
+{
+	int page_faultsFIFO = _procedimientos.pageFaultsFIFO(secuencia, marcos);
+	cout << "Page-faults: " << page_faultsFIFO << endl;
+
+	int page_faultsLIFO = _procedimientos.pageFaultsLIFO(secuencia, marcos);
+	cout << "Page-faults: " << page_faultsLIFO << endl;
 }

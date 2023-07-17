@@ -56,6 +56,7 @@ void interfaz::menuPrincipal()
 	{
 		system("cls");
 		
+		cout << endl;
 		cout << "		[]------------------------------------------[]" << endl;
 		cout << "		|                Menú Principal              |" << endl;
 		cout << "		[]------------------------------------------[]" << endl;
@@ -67,7 +68,7 @@ void interfaz::menuPrincipal()
 		for (int i = 0;;)
 		{
 			// Indica la posicion de donde se escribirá el texto
-			goToXY(28, 6);
+			goToXY(28, 7);
 			// Inidicará el color a ingresar marcar si la opcion es seleccionada
 			color(Set[0]);
 			// Texto de la opción
@@ -76,7 +77,7 @@ void interfaz::menuPrincipal()
 			cout << WHITE << "	     |" << endl;
 			cout << "		|";
 
-			goToXY(36, 7);
+			goToXY(36, 8);
 			color(Set[1]);
 			cout << "Salir";
 
@@ -137,10 +138,10 @@ void interfaz::menuPrincipal()
 							confirmacion = _metodosInterface.confirmacionDefS();
 						}
 
-						_procedimientos.pageFaults(_procedimientos.agregarSecuencia(secuencia), cantidadMarcos);
+						_metodosInterface.pageFaults(_procedimientos.agregarSecuencia(secuencia), cantidadMarcos);
 
 						cout << "----------------------------------------" << endl;
-						cout << GREEN << "¡La secuencia de números a sido ingresada con exito!" << endl;
+						cout << GREEN << "¡La secuencia de números a sido ingresada con exito!" << WHITE << endl;
 						system("pause");
 					}
 					catch (exception& e) {
