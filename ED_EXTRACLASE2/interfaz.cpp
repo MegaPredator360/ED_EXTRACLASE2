@@ -27,7 +27,7 @@ void interfaz::pantallaTitulo()
 
 void interfaz::color(int color)
 {
-	// Obtendr� el codigo de color para la consola
+	// Obtendrá el codigo de color para la consola
 	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), color);
 }
 
