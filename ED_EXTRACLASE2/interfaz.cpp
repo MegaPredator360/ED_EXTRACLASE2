@@ -45,7 +45,7 @@ void interfaz::menuPrincipal()
 {
 	// Llamado a la clase de metodos creados exclusivamente para la interface
 	metodosInterface _metodosInterface;
-	colas _cola;
+	procedimientos _procedimientos;
 
 	int counter = 1;				// Contador para averiguar la opción seleccionada
 	int Set[] = { 7, 7, 7, 7 };		// Se coloca a todas las opciones con el color por defecto
@@ -67,31 +67,17 @@ void interfaz::menuPrincipal()
 		for (int i = 0;;)
 		{
 			// Indica la posicion de donde se escribirá el texto
-			goToXY(25, 6);
+			goToXY(28, 6);
 			// Inidicará el color a ingresar marcar si la opcion es seleccionada
 			color(Set[0]);
 			// Texto de la opción
-			cout << "Agregar Secuencia de Números";
-
-			cout << WHITE << "	     |" << endl;
-			cout << "		|";
-
-			goToXY(27, 7);
-			color(Set[1]);
-			cout << "Ingresar Número de Marcos";
-
-			cout << WHITE << "	     |" << endl;
-			cout << "		|";
-
-			goToXY(28, 8);
-			color(Set[2]);
 			cout << "Realizar Procedimiento";
 
-			cout << WHITE << "           |" << endl;
+			cout << WHITE << "	     |" << endl;
 			cout << "		|";
 
-			goToXY(36, 9);
-			color(Set[3]);
+			goToXY(36, 7);
+			color(Set[1]);
 			cout << "Salir";
 
 			cout << WHITE << "		     |" << endl;
@@ -100,20 +86,20 @@ void interfaz::menuPrincipal()
 
 			key = _getch();
 
-			if (key == 72 && (counter >= 1 && counter <= 4))		// Validar si la flecha arriba es pulsada	|| 72 es el valor de la flecha arriba en ASCII
+			if (key == 72 && (counter >= 1 && counter <= 2))		// Validar si la flecha arriba es pulsada	|| 72 es el valor de la flecha arriba en ASCII
 			{
 				counter--;
 
 				if (counter == 0)
 				{
-					counter = 4;
+					counter = 2;
 				}
 			}
-			else if (key == 80 && (counter >= 1 && counter <= 4))	// Validar si la flecha abajo es pulsada	|| 80 es el valor de la flecha abajo en ASCII
+			else if (key == 80 && (counter >= 1 && counter <= 2))	// Validar si la flecha abajo es pulsada	|| 80 es el valor de la flecha abajo en ASCII
 			{
 				counter++;
 
-				if (counter == 5)
+				if (counter == 3)
 				{
 					counter = 1;
 				}
@@ -125,18 +111,37 @@ void interfaz::menuPrincipal()
 				case 1:
 					try
 					{
-						
-						int secuencia;
+						// Valores para el procedimiento de la secuencia
+						string secuencia;
+						string confirmacion = "N";
+						int cantidadMarcos = 0;
 
-						system("cls");
-						cout << endl;
-						cout << "		[]--------------------------------------------[]" << endl;
-						cout << "		|               Agregar Un Número              |" << endl;
-						cout << "		[]--------------------------------------------[]" << endl;
-						cout << endl;
+						while (confirmacion == "N")
+						{
+							system("cls");
+							cout << endl;
+							cout << "		[]--------------------------------------------[]" << endl;
+							cout << "		|          Realizar procedimiento de           |" << endl;
+							cout << "		|         remplazo de marcos de pagina         |" << endl;
+							cout << "		[]--------------------------------------------[]" << endl;
+							cout << endl;
 
-						cout << "Ingresa un Número:" << endl;
-						secuencia = stoi(_metodosInterface.ingresarNumeros());
+							cout << "Ingresa la secuencia de números: " << YELLOW << "(Cada número deberá de ser separado por un espacio)" << WHITE << endl;
+							secuencia = _metodosInterface.ingresarSecuenciaNumeros();
+
+							cout << endl << "Ingresa la cantidad de marcos de pagina:" << endl;
+							cantidadMarcos = stoi(_metodosInterface.ingresarNumeros());
+
+							cout << "----------------------------------------" << endl;
+							cout << "¿Los datos ingresados son correctos? [S/n]" << endl;
+							confirmacion = _metodosInterface.confirmacionDefS();
+						}
+
+						_procedimientos.pageFaults(_procedimientos.agregarSecuencia(secuencia), cantidadMarcos);
+
+						cout << "----------------------------------------" << endl;
+						cout << GREEN << "¡La secuencia de números a sido ingresada con exito!" << endl;
+						system("pause");
 					}
 					catch (exception& e) {
 						cout << RED << "Ha ocurrido un error: " << WHITE << e.what() << endl;
@@ -147,33 +152,6 @@ void interfaz::menuPrincipal()
 					break;
 
 				case 2:
-					try
-					{
-						// Agregar marcos de números
-					}
-					catch (exception& e) {
-						cout << RED << "Ha ocurrido un error: " << WHITE << e.what() << endl;
-						cout << "-------------------------" << endl;
-						cout << "Volviendo al Menu Principal." << endl << endl;
-						system("pause");
-					}
-
-					break;
-
-				case 3:
-					try {
-						// Realizar procedimiento
-					}
-					catch (exception& e) {
-						cout << RED << "Ha ocurrido un error: " << WHITE << e.what() << endl;
-						cout << "-------------------------" << endl;
-						cout << "Volviendo al Menu Principal." << endl << endl;
-						system("pause");
-					}
-
-					break;
-
-				case 4:
 					try
 					{
 						// Salir del programa
@@ -192,7 +170,7 @@ void interfaz::menuPrincipal()
 						if (confirmacion == "S")
 						{
 							cout << "-----------------------------------" << endl;
-							cout << "¡Gracias por usar el programa!" << endl;
+							cout << GREEN << "¡Gracias por usar el programa!" << WHITE << endl;
 							system("pause");
 							exit(0);
 						}

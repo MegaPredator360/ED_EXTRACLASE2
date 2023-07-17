@@ -131,6 +131,7 @@
     <ClCompile Include="interfaz.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="metodosInterface.cpp" />
+    <ClCompile Include="metodosProcedimientos.cpp" />
     <ClCompile Include="optimo.cpp" />
     <ClCompile Include="pilas.cpp" />
     <ClCompile Include="procedimientos.cpp" />
@@ -139,6 +140,7 @@
     <ClInclude Include="colas.h" />
     <ClInclude Include="interfaz.h" />
     <ClInclude Include="metodosInterface.h" />
+    <ClInclude Include="metodosProcedimientos.h" />
     <ClInclude Include="optimo.h" />
     <ClInclude Include="pilas.h" />
     <ClInclude Include="procedimientos.h" />

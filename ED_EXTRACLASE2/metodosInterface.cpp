@@ -13,10 +13,75 @@ string metodosInterface::ingresarNumeros()
 			cout << asciiChar;						// Se imprime el valor
 			num = num + to_string(asciiChar);		// Convertir de Int a String para poder concatenar
 		}
-		else if (asciiChar == 13 && num != "")		// Hará la funcion del enter
+		else if (asciiChar == 13)					// Verificará si la ultima tecla pulsada fue "Enter"
 		{
-			cout << endl;							// Hará un salto de linea
-			break;									// Terminará el while
+			if (num == "")
+			{
+				PlaySound(TEXT("SystemStart"), NULL, SND_ALIAS | SND_ASYNC);	// Reproducirá el sonido de alerta en caso de que el espacio esté vacio
+			}
+			else
+			{
+				cout << endl;						// Hará un salto de linea
+				break;								// Terminará el while
+			}
+		}
+		else if (asciiChar == 8)					// Verificará si la tecla "Backspace" fue pulsada
+		{
+			if (num == "")
+			{
+				PlaySound(TEXT("SystemStart"), NULL, SND_ALIAS | SND_ASYNC);	// Reproducirá el sonido de alerta en caso de que el espacio esté vacio
+			}
+			else
+			{
+				cout << '\b';							// Moverá el cursor un caracter atrás
+				cout << " ";							// Remplazará el valor por un espacio
+				cout << '\b';
+				num = num.substr(0, num.size() - 1);	// Borrará el ultimo valor del string
+			}
+			
+		}
+	} while (1);
+
+	return (num);
+}
+
+string metodosInterface::ingresarSecuenciaNumeros()
+{
+	int asciiChar = 0;
+	string num = "";
+	do
+	{
+		asciiChar = _getch();						// Obtendra las teclas de formato ASCII 
+		if (asciiChar >= 48 && asciiChar <= 57)		// Validaremos solo los valores que sean equivalentes a numeros
+		{
+			asciiChar = (asciiChar - 48);			// Los valores de ASCII para numeros 0-9 es igual a 48 hasta 57, por lo que se le resta a 48 por ser equivalente a 0
+			cout << asciiChar;						// Se imprime el valor
+			num = num + to_string(asciiChar);		// Convertir de Int a String para poder concatenar
+		}
+		else if (asciiChar == 32)					// Verificará si la tecla "espacio" fue pulsada
+		{
+			if (num.back() == ' ')					// Si el ultimo caracter es un "espacio" no ingresará otro hasta que ingrese un nuevo digito
+			{
+				PlaySound(TEXT("SystemStart"), NULL, SND_ALIAS | SND_ASYNC);
+			}
+			else
+			{
+				// Agregará un espacio a la variable y a la consola
+				num = num + " ";
+				cout << " ";
+			}
+		}
+		else if (asciiChar == 13)					// Verificará si la ultima tecla pulsada fue "Enter"
+		{
+			if (num == "")
+			{
+				PlaySound(TEXT("SystemStart"), NULL, SND_ALIAS | SND_ASYNC);	// Reproducirá el sonido de alerta en caso de que el espacio esté vacio
+			}
+			else
+			{
+				cout << endl;						// Hará un salto de linea
+				break;								// Terminará el while
+			}
 		}
 		else if (asciiChar == 8 && num == "")
 		{

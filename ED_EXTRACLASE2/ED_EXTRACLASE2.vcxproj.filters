@@ -36,6 +36,9 @@
     <ClCompile Include="metodosInterface.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="metodosProcedimientos.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="interfaz.h">
@@ -57,6 +60,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="metodosInterface.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="metodosProcedimientos.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
