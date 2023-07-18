@@ -22,7 +22,7 @@ Para la ejecución de este programa se necesita un editor como Visual Studio Com
 
 Para Visual Studio Community 2022 necesitas tener descargado la carga de trabajo **Desarrollo para el escritorio con C++**, ya con esto será suficiente para poder ejecutar el programa.
 
-En el caso de Visual Studio Code necesitas tener instalado en tu computadora un compilador de C++ que te permita correr el programa, los más recomendados son [g++]() o [clang]().
+En el caso de Visual Studio Code necesitas tener instalado en tu computadora un compilador de C++ que te permita correr el programa, los más recomendados son [g++](https://www.msys2.org/) o [clang](https://clang.llvm.org/get_started.html).
 
 Se recomienda tener instalado también la extensión de C++ en Visual Studio Code para la detección de errores de sintaxis y ayudas con las librerías. 
 
