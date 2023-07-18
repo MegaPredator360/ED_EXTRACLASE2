@@ -32,7 +32,7 @@ Se recomienda tener instalado también la extensión de C++ en Visual Studio Cod
 
 Una vez instalado, pulsas en el botón de ejecutar en la esquina superior derecha.
 
-![VSCCppRun](https://github.com/MegaPredator360/ED_EXTRACLASE2/assets/48075699/2bba3329-eb49-497a-ac8b-26e3ea452a2f)
+![VSCCppRun](https://github.com/MegaPredator360/ED_EXTRACLASE2/assets/48075699/2bba3329-eb49-497a-ac8b-26e3ea452a2f | width=50)
 
 Si es tu primer programa de C++ corriendo en Visual Studio Code se te abrirá la paleta de comando pidiendote que selecciones un compilador para debugear el programa...
 Te recomiendo que selecciones alguno de los 2 compiladores que están marcados.
