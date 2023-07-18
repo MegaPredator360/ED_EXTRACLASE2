@@ -22,11 +22,24 @@ Para la ejecución de este programa se necesita un editor como Visual Studio Com
 
 Para Visual Studio Community 2022 necesitas tener descargado la carga de trabajo **Desarrollo para el escritorio con C++**, ya con esto será suficiente para poder ejecutar el programa.
 
+![VSWorkloads](https://github.com/MegaPredator360/ED_EXTRACLASE2/assets/48075699/9c66f062-e5f0-4618-8d0f-b274f8914515)
+
 En el caso de Visual Studio Code necesitas tener instalado en tu computadora un compilador de C++ que te permita correr el programa, los más recomendados son [g++](https://www.msys2.org/) o [clang](https://clang.llvm.org/get_started.html).
 
 Se recomienda tener instalado también la extensión de C++ en Visual Studio Code para la detección de errores de sintaxis y ayudas con las librerías. 
 
-Una vez instalado, pulsas “Ctrl + Shift + P” Para abrir la paleta de comando y apartir de ahí puedes compilar el programa… El archivo principal del programa se llama ```main.cpp```
+![VSCCppExtension](https://github.com/MegaPredator360/ED_EXTRACLASE2/assets/48075699/591a293a-9b7a-4106-84c7-79a5f4433640)
+
+Una vez instalado, pulsas en el botón de ejecutar en la esquina superior derecha.
+
+![VSCCppRun](https://github.com/MegaPredator360/ED_EXTRACLASE2/assets/48075699/2bba3329-eb49-497a-ac8b-26e3ea452a2f)
+
+Si es tu primer programa de C++ corriendo en Visual Studio Code se te abrirá la paleta de comando pidiendote que selecciones un compilador para debugear el programa...
+Te recomiendo que selecciones alguno de los 2 compiladores que están marcados.
+
+![VSCCppSelectDebug](https://github.com/MegaPredator360/ED_EXTRACLASE2/assets/48075699/1dc39b84-695f-4fb4-a1b4-cc8c3d479e96)
+
+Ya que lo tengas seleccionado, Visual Studio Code empezará a compílar el programa. El archivo principal del programa se llama ```main.cpp```
 
 ## Desarrolladores:
 
