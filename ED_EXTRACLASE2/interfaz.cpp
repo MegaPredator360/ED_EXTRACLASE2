@@ -48,7 +48,7 @@ void interfaz::menuPrincipal()
 	procedimientos _procedimientos;
 
 	int counter = 1;				// Contador para averiguar la opci�n seleccionada
-	int Set[] = { 7, 7, 7, 7 };		// Se coloca a todas las opciones con el color por defecto
+	int Set[] = { 7, 7 };		// Se coloca a todas las opciones con el color por defecto
 	Set[0] = 23;					// Colocar la primera opc�on como seleccionada
 	int key = 0;					// Encargada de recibir el valor de la tecla pulsada en ASCII
 
@@ -194,8 +194,6 @@ void interfaz::menuPrincipal()
 			// Color por defecto de todas las opciones
 			Set[0] = 7;			// 7 es el color blanco
 			Set[1] = 7;
-			Set[2] = 7;
-			Set[3] = 7;
 
 			// Cambiar color basado en la opcion seleccionada
 			switch (counter)
@@ -208,14 +206,6 @@ void interfaz::menuPrincipal()
 
 			case 2:
 				Set[1] = 23;
-				break;
-
-			case 3:
-				Set[2] = 23;
-				break;
-
-			case 4:
-				Set[3] = 23;
 				break;
 			}
 		}

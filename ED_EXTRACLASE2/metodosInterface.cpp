@@ -1,5 +1,4 @@
 #include "metodosInterface.h"
-#include <map>
 
 string metodosInterface::ingresarNumeros()
 {
