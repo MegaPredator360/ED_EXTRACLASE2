@@ -1,4 +1,5 @@
 #include "metodosInterface.h"
+#include <map>
 
 string metodosInterface::ingresarNumeros()
 {
@@ -168,6 +169,22 @@ void metodosInterface::pageFaults(int* secuencia, int marcos)
 	int page_faultsLIFO = _procedimientos.pageFaultsLIFO(secuencia, marcos);
 	cout << "Page-faults: " << page_faultsLIFO << endl;
 
-	int optimalPage = _procedimientos.optimalPage(secuencia, marcos);
-	cout << "Page-faults: " << page_faultsLIFO << endl;
+	int page_faultsOptimal = _procedimientos.optimalPage(secuencia, marcos);
+	cout << "Page-faults: " << page_faultsOptimal << endl;
+
+	map<int, string> algoritmos;
+	algoritmos[page_faultsFIFO] = "FIFO";
+	algoritmos[page_faultsLIFO] = "LIFO";
+	algoritmos[page_faultsOptimal] = "Óptimo";
+
+	cout << endl << "El o los algoritmos mas efientes son: ";
+	for (const auto& pair : algoritmos) {
+		if (pair.first == algoritmos.begin()->first) {
+			cout << pair.second;
+		}
+		else {
+			cout << ", " << pair.second;
+		}
+	}
+	cout << endl;
 }
