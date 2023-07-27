@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Para mostrar caracteres especiales en la pagina -->
+    <meta charset="UTF-8" />
+
+    <!-- Icono de pestaña del navegador -->
+    <link rel="icon" href="./images/favicon.ico">
+
+    <!-- Importacion de pagina de estilos -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Importacion de archivo de JavaScript -->
+    <script type="text/javascript" src="./script.js"></script>
+
+    <!-- Titulo de la pagina -->
+    <title>Informe del Proyecto</title>
+</head>
+
+<body>
+    <!-- Portada -->
+    <div>
+        <img src="./images/01_Logo_Latina_ASU_Gris.png" alt="Imagen de Portada">
+    </div>
+    <h1>Informe del Proyecto</h1>
+
+    <!-- Objetivos -->
+    <h2>Objetivos</h2>
+    <p>El objetivo de este proyecto es implementar una aplicación en Visual Studio usando C++ para analizar algoritmos
+        de reemplazo de marcos de página (FIFO, LIFO, Optimo). La aplicación tomará la secuencia de páginas y el número
+        de marcos de página como entrada y evaluará el número de fallas de página que genera cada algoritmo. El objetivo
+        es comparar la eficiencia de gestión de memoria de estos algoritmos en condiciones de recursos limitados para
+        determinar el algoritmo más adecuado para diferentes escenarios. El proyecto tiene como objetivo proporcionar
+        experiencia práctica en programación y mejorar las habilidades analíticas en el campo de la gestión de memoria.
+        <br />
+        En resumen, nuestro objetivo es obtener conocimientos prácticos y experiencia en el análisis de algoritmos de
+        reemplazo de marcos de página y aplicar estos conocimientos a proyectos futuros.
+    </p>
+
+    <!-- Requerimientos -->
+    <h2>Requerimientos</h2>
+    <p>Para llevar a cabo el proyecto de análisis del algoritmo de reemplazo de marcos de página en Visual Studio, se
+        deben cumplir los siguientes requisitos básicos:
+    <ul>
+        <li>
+            <b>Visual Studio:</b> Instale la última versión de Visual Studio en su computadora. Puede descargarlo e
+            instalarlo
+            desde el sitio web oficial de Microsoft.
+        </li>
+        <li>
+            <b>Lenguaje de programación C++:</b> El proyecto se desarrollará utilizando el lenguaje de programación C++.
+        </li>
+        <li>
+            <b>Conocimientos de C++:</b> Es muy importante tener conocimientos básicos o intermedios de programación en
+            C++.
+            Estructuras de control, funciones, arreglos y punteros en C++.
+        </li>
+        <li>
+            <b>Estructuras de datos:</b> utilice estructuras de datos adecuadas para almacenar secuencias de páginas,
+            marcos de
+            página y otros datos necesarios para el análisis de algoritmos.
+        </li>
+        <li>
+            <b>Análisis de resultados:</b> Es necesario analizar y comparar los resultados obtenidos para determinar la
+            eficiencia de cada algoritmo y seleccionar el algoritmo más adecuado para diferentes escenarios.
+        </li>
+    </ul>
+    </p>
+
+    <!-- Definiciones -->
+    <h2>Definiciones</h2>
+    <p>A continuación se muestra una serie de definiciones de los algoritmos utilizados para este programa:
+    <ul>
+        <li>
+            <b>Page Fault (Falla de Página):</b>
+            Una "Falla de Página" ocurre cuando un programa necesita acceder a una página de memoria que no está
+            actualmente cargada en la memoria RAM, sino que se encuentra almacenada en el disco duro u otro
+            almacenamiento secundario.
+            El sistema operativo debe cargar la página requerida en la memoria RAM para que el programa pueda seguir
+            funcionando correctamente. Minimizar el número de "Fallas de Página" es importante para mejorar el
+            rendimiento del sistema.
+        </li>
+        <li>
+            <b>FIFO (First In, First Out):</b>
+            El algoritmo FIFO es un método de reemplazo de marcos de página en el cual se sustituye el marco que ha
+            estado en memoria durante más tiempo. Funciona de manera similar a una cola, donde el primer marco que fue
+            cargado en memoria es el primero en ser reemplazado cuando es necesario liberar espacio para un nuevo marco.
+            Es sencillo de implementar, pero puede no ser el más eficiente en términos de reducción de page-faults en
+            todas las situaciones.
+        </li>
+        <li>
+            <b>LIFO (Last In, First Out):</b>
+            El algoritmo LIFO es otro método de reemplazo de marcos de página, pero a diferencia del FIFO, sustituye el
+            marco más reciente que ha sido cargado en memoria. Funciona como una pila, donde el último marco que ha sido
+            colocado en memoria es el primero en ser reemplazado cuando se necesita espacio para un nuevo marco. Al
+            igual que FIFO, LIFO es sencillo de implementar, pero puede no garantizar la mejor eficiencia en todas las
+            situaciones.
+        </li>
+        <li>
+            <b>Óptimo:</b>
+            El algoritmo óptimo es un método de reemplazo de marcos de página teóricamente óptimo, ya que realiza una
+            simulación anticipada de todos los accesos futuros a las páginas y selecciona el marco que será referenciado
+            más lejos en el tiempo. De esta manera, se asegura que el marco reemplazado sea aquel que no será requerido
+            por
+            más tiempo, lo que garantiza el menor número posible de page-faults. Sin embargo, en la práctica,
+            implementar
+            este algoritmo puede ser difícil debido a la necesidad de conocer todos los accesos futuros, lo que lo hace
+            menos
+            viable en comparación con FIFO y LIFO.
+        </li>
+    </ul>
+    </p>
+
+    <!-- Opciones del Sistema -->
+    <h2>Opciones del Sistema</h2>
+    <p>
+        Realizar Procedimiento
+        <br>Salir
+    </p>
+
+    <!-- Opciones del Sistema -->
+    <h2>Portada</h2>
+    <p>Al iniciar el programa, se presentará al usuario una interfaz con una portada que contendrá el nombre del
+        proyecto: "ED Tarea Pilas/Colas" y los nombres de los participantes involucrados.
+
+        <br>
+        <br><img src="./images/pantalla_titulo.png" alt="Imagen del Menú 1">
+        <br>
+    <p>Al finalizar la portada, se mostrará la siguiente instrucción: "Presione una tecla para continuar...", que guiará
+        al usuario hacia el siguiente menú del programa, permitiéndole proceder y explorar sus funcionalidades.
+
+        <!-- Opciones del Sistema -->
+    <h2>Menú</h2>
+    <p>Al acceder al menú principal, los usuarios encontrarán dos opciones disponibles: "Realizar Procedimiento" y
+        "Salir". La opción que elija estará subrayada con color azul. Al presionar la tecla "Enter" sobre esta opción,
+        serán guiados hacia una nueva pantalla que les permitirá llevar a cabo los procedimientos relacionados con los
+        algoritmos de reemplazo de marcos de página (FIFO, LIFO, Optimo). En caso de que no deseen proceder con esta
+        opción, podrán seleccionar la segunda alternativa para salir del programa de manera segura.
+        <br>
+        <br> <img src="./images/menu_principal.png" alt="Imagen del Menú 1">
+        <br>
+
+        <!-- Opciones del Sistema -->
+    <h2>Ingresa la Secuencia de numeros</h2>
+    <p>Al seleccionar la opción "Realizar Procedimiento", el usuario será redirigido a otra pantalla donde se le
+        presentará la siguiente instrucción: "Ingresa la secuencia de números: (Cada número deberá ser separado por un
+        espacio)" En esta instrucción,
+        se solicita al usuario que ingrese una secuencia de números de su elección, donde cada número debe estar
+        separado por un espacio. Para llevar a cabo este análisis, se necesita una secuencia de números que representará
+        las páginas. Cada número en esta secuencia representará una página.
+        Es importante seguir rigurosamente el enunciado y asegurarse de que únicamente se ingresen números. Si se llega
+        a introducir una letra o símbolo, el programa mostrará un mensaje de error y solicitará nuevamente ingresar la
+        secuencia de números de acuerdo con las indicaciones. Una vez que el usuario proporciona una secuencia válida de
+        números, el programa procederá con la siguiente instrucción o paso correspondiente.
+        <br>
+        <br> <img src="./images/secuencia_numeros.png" alt="Imagen del Menú 1">
+        <br>
+
+        <!-- Opciones del Sistema -->
+    <h2>Ingresa la cantidad de marcos de pagina</h2>
+    <p>Al ingresar la secuencia de números para llevar a cabo este análisis, se mostrará otra
+        instrucción que solicitará al usuario ingresar el número de marcos de página. Es importante proporcionar la
+        cantidad de marcos de página deseada, ya que esto afectará directamente el rendimiento y la eficiencia de los
+        algoritmos de reemplazo de marcos de página que serán evaluados. Una vez ingresado el número de marcos de
+        página, el programa procederá a construir las secuencias de reemplazo de páginas para cada algoritmo de
+        reemplazo mencionado (FIFO, LIFO, Optimo) y evaluará el número de page-faults ejecutados por cada uno.
+        <br>
+        <br> <img src="./images/secuencia_numeros_marco.png" alt="Imagen del Menú 1">
+        <br>
+
+        <!-- Opciones del Sistema -->
+    <h2>¿Los datos infresados son correctos?</h2>
+    <p>Al ingresar el número de marcos de página, aparecerá otra instrucción que preguntará al usuario lo siguiente:
+        "¿Los datos ingresados son correctos? [S/n]"
+
+        Esta instrucción tiene el propósito de permitir al usuario verificar si ha proporcionado la secuencia de números
+        y el número de marcos de página correctos antes de proceder con el análisis de los algoritmos de reemplazo de
+        marcos de página. Si el usuario está seguro de que los datos ingresados son correctos, podrá responder con "S" o
+        "s" (representando "Sí") y el programa procederá a realizar el análisis y comparación de los algoritmos. En caso
+        de que el usuario identifique algún error o desee realizar cambios en los datos ingresados, podrá responder con
+        "N" o "n" (representando "No"). Luego de recibir esta respuesta, el programa volverá a solicitar la secuencia de
+        números y/o el número de marcos de página
+
+        <!-- Resultados -->
+    <h2 id="resultados">Resultados</h2>
+    <p>Después de que el usuario confirma que los datos ingresados son correctos, el programa procederá a realizar el
+        análisis de los algoritmos de reemplazo de marcos de página (FIFO, LIFO, Optimo) utilizando la secuencia de
+        números y la cantidad de marcos de página proporcionados. Una vez finalizado el análisis, el programa presentará
+        los resultados obtenidos en cuanto al número de page-faults (fallos de página) ejecutados por cada algoritmo.
+        Además, se mostrará una comparativa de la eficiencia de los algoritmos, resaltando cuál de ellos logró realizar
+        la menor cantidad de page-faults y cuál se asemejó más al algoritmo óptimo en términos de minimizar los fallos
+        de página.
+        <br>
+        En resumen, después de confirmar la corrección de los datos, el programa mostrará los resultados del análisis,
+        permitiendo al usuario evaluar la eficiencia de los algoritmos y tomar decisiones informadas sobre la mejor
+        opción para la gestión de memoria en el contexto específico del problema.
+    </p>
+    <!-- Diseño de Pruebas -->
+    <h2 id="diseno-pruebas">Diseño de Pruebas</h2>
+    <p>El objetivo de las pruebas es validar la correcta funcionalidad de la implementación del programa de análisis de
+        algoritmos de reemplazo de marcos de página. Se busca asegurar que el programa acepte adecuadamente la secuencia
+        de números y el número de marcos de página, que construya las secuencias de reemplazo para cada algoritmo y que
+        muestre los resultados correctos de page-faults y el algoritmo más eficiente según la cantidad de page-faults.
+        Prueba de ingreso de datos:
+    <ul>
+        <li>
+            <b>Caso de prueba 1:</b> Verificar que el programa acepte correctamente la secuencia de números separados
+            por espacios.
+        </li>
+        <li>
+            <b>Caso de prueba 2:</b>
+            Comprobar que el programa acepte y procese correctamente el número de marcos de página
+            requerido.
+            Resultado: Se acepta y procesa correctamente la secuencia de números separados por espacios y de marcos de
+            página requerido.
+        </li>
+        <li>
+            <b>Caso de prueba 3:</b> Evaluar que el programa construya las secuencias de reemplazo de página para cada
+            algoritmo
+            (FIFO, LIFO, Óptimo) de manera coherente con la secuencia de números proporcionada.
+            Resultado: Se construyen secuencias de manera coherente y correctas.
+        </li>
+        <li>
+            <b>Caso de prueba 4:</b> Verificar que el programa calcule correctamente el número de page-faults para cada
+            algoritmo.
+        </li>
+        <li>
+            <b>Caso de prueba 5:</b> Comprobar que el programa muestre los resultados numéricos de page-faults de forma
+            precisa.
+            Resultado: El programa calcula correctamente y muestra los resultados de page-faults para cada algoritmo.
+        </li>
+        <li>
+            <b>Caso de prueba 6:</b>
+            Evaluar que el programa identifique correctamente el algoritmo con la menor cantidad de
+            page-faults como el más eficiente.
+        </li>
+        <li>
+            <b>Caso de prueba 7:</b>
+            Comprobar que el programa muestre claramente el nombre del algoritmo óptimo identificado.
+            Resultado: El programa identifica y muestra el algoritmo más eficiente.
+            Pruebas de validación de datos:
+        </li>
+        <li>
+            <b>Caso de prueba 8:</b>
+            Verificar que el programa detecte y maneje adecuadamente situaciones de ingreso de datos no
+            válidos, como letras o caracteres especiales en lugar de números.
+            Resultado: El programa está validado correctamente.
+        </li>
+    </ul>
+    </p>
+    <img src="./images/marcos_secuencia.png" alt="Imagen de la conclusión">
+
+    <!-- Conclusiones -->
+    <h2>Conclusiones</h2>
+    <p>En este proyecto de desarrollo e implementación, hemos logrado construir una solución efectiva para analizar y
+        comparar diferentes algoritmos de reemplazo de marcos de página (FIFO, LIFO, Optimo). Nuestro objetivo era
+        evaluar su eficiencia en la gestión de memoria y determinar cuál de ellos realizaría la menor cantidad de
+        page-faults.
+        En cuanto a mejoras, consideramos que podríamos ampliar nuestro análisis incluyendo otros factores que pueden
+        influir en el rendimiento de los algoritmos, como la frecuencia de acceso a las páginas o el tamaño de las
+        secuencias. Esto nos permitiría obtener resultados aún más precisos y adaptados a escenarios más diversos.
+        En resumen, nos sentimos satisfechos con los resultados obtenidos en este proyecto y creemos que hemos alcanzado
+        nuestro objetivo de analizar y comparar los algoritmos de reemplazo de marcos de página.
+    </p>
+
+</body>
+
+</html>
