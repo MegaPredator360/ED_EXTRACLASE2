@@ -1,0 +1,40 @@
+/* Estilos CSS para dar formato */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 30px;
+     background-color:#E0FFFF; /* Color de fondo */
+}
+h1 {
+    text-align: center;
+    color: #3366cc; /* Color de título */
+}
+
+h2 {
+    color: #007BFF;
+    border-bottom: 1px solid #007BFF;
+    padding-bottom: 5px;
+}
+
+p {
+    color: #333; /* Color de texto normal */
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+}
+#menu {
+    text-align: center;
+    margin-top: 40px;
+}
+#menu img {
+    max-width: 150px;
+    height: auto;
+    margin: 10px;
+}
+#resultados, #diseno-pruebas, #conclusion {
+    margin-top: 40px;
+}

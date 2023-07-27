@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Para mostrar caracteres especiales en la pagina -->
+    <meta charset="UTF-8" />
+
+    <!-- Icono de pestaña del navegador -->
+    <link rel="icon" href="./images/favicon.ico">
+
+    <!-- Importacion de pagina de estilos -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Importacion de archivo de JavaScript -->
+    <script type="text/javascript" src="./script.js"></script>
+
+    <title>Informe del Proyecto</title>
+</head>
+
+<body>
+    <!-- Portada -->
+
+    <div>
+        <img src="./images/01_Logo_Latina_ASU_Gris.png" alt="Imagen de Portada">
+
+    </div>
+    <h1>Informe del Proyecto</h1>
+
+
+    <!-- Objetivos -->
+    <h2>Objetivos</h2>
+    <p>El objetivo de este proyecto es implementar una aplicación en Visual Studio usando C++ para analizar algoritmos
+        de reemplazo de marcos de página (FIFO, LIFO, Optimo). La aplicación tomará la secuencia de páginas y el número
+        de marcos de página como entrada y evaluará el número de fallas de página que genera cada algoritmo. El objetivo
+        es comparar la eficiencia de gestión de memoria de estos algoritmos en condiciones de recursos limitados para
+        determinar el algoritmo más adecuado para diferentes escenarios. El proyecto tiene como objetivo proporcionar
+        experiencia práctica en programación y mejorar las habilidades analíticas en el campo de la gestión de memoria.
+
+        En resumen, nuestro objetivo es obtener conocimientos prácticos y experiencia en el análisis de algoritmos de
+        reemplazo de marcos de página y aplicar estos conocimientos a proyectos futuros.</p>
+
+    <!-- Requerimientos -->
+    <h2>Requerimientos</h2>
+    <p>Para llevar a cabo el proyecto de análisis del algoritmo de reemplazo de marcos de página en Visual Studio, se
+        deben cumplir los siguientes requisitos básicos:
+
+        Visual Studio: Instale la última versión de Visual Studio en su computadora. Puede descargarlo e instalarlo
+        desde el sitio web oficial de Microsoft.
+
+        Lenguaje de programación C++: El proyecto se desarrollará utilizando el lenguaje de programación C++.
+
+        Conocimientos de C++: Es muy importante tener conocimientos básicos o intermedios de programación en C++.
+        Estructuras de control, funciones, arreglos y punteros en C++.
+
+        Estructuras de datos: utilice estructuras de datos adecuadas para almacenar secuencias de páginas, marcos de
+        página y otros datos necesarios para el análisis de algoritmos.
+
+        Análisis de resultados: Es necesario analizar y comparar los resultados obtenidos para determinar la eficiencia
+        de cada algoritmo y seleccionar el algoritmo más adecuado para diferentes escenarios.</p>
+
+    <!-- Definiciones -->
+    <h2>Definiciones</h2>
+    <p>A continuación se muestra una serie de definiciones de los algoritmos utilizados para este programa:
+
+        Page Fault (Falla de Página):
+        Una "Falla de Página" ocurre cuando un programa necesita acceder a una página de memoria que no está actualmente
+        cargada en la memoria RAM, sino que se encuentra almacenada en el disco duro u otro almacenamiento secundario.
+        El sistema operativo debe cargar la página requerida en la memoria RAM para que el programa pueda seguir
+        funcionando correctamente. Minimizar el número de "Fallas de Página" es importante para mejorar el rendimiento
+        del sistema.
+
+
+        FIFO (First In, First Out):
+        El algoritmo FIFO es un método de reemplazo de marcos de página en el cual se sustituye el marco que ha estado
+        en memoria durante más tiempo. Funciona de manera similar a una cola, donde el primer marco que fue cargado en
+        memoria es el primero en ser reemplazado cuando es necesario liberar espacio para un nuevo marco. Es sencillo de
+        implementar, pero puede no ser el más eficiente en términos de reducción de page-faults en todas las
+        situaciones.
+
+
+        LIFO (Last In, First Out):
+        El algoritmo LIFO es otro método de reemplazo de marcos de página, pero a diferencia del FIFO, sustituye el
+        marco más reciente que ha sido cargado en memoria. Funciona como una pila, donde el último marco que ha sido
+        colocado en memoria es el primero en ser reemplazado cuando se necesita espacio para un nuevo marco. Al igual
+        que FIFO, LIFO es sencillo de implementar, pero puede no garantizar la mejor eficiencia en todas las
+        situaciones.
+
+        Óptimo:
+        El algoritmo óptimo es un método de reemplazo de marcos de página teóricamente óptimo, ya que realiza una
+        simulación anticipada de todos los accesos futuros a las páginas y selecciona el marco que será referenciado más
+        lejos en el tiempo. De esta manera, se asegura que el marco reemplazado sea aquel que no será requerido por más
+        tiempo, lo que garantiza el menor número posible de page-faults. Sin embargo, en la práctica, implementar este
+        algoritmo puede ser difícil debido a la necesidad de conocer todos los accesos futuros, lo que lo hace menos
+        viable en comparación con FIFO y LIFO.
+    </p>
+
+    <object data="Opciones del sistema.html" width="1200" height="700"></object>
+
+</body>
+
+</html>
