@@ -1,7 +1,6 @@
 #pragma once
 #include <string>			// Para poder usar el tipo de dato "string"
 #include <iostream>			// Permite al usuario interactuar con la aplicacion de consola
-#include <wchar.h>			// Para caracteres especiales
 #include <conio.h>			// Para obtener caracter en formato ASCII
 #include <queue>			// Para poder realizar listas en colas
 #include <stack>			// Para poder realizar listas en pilas

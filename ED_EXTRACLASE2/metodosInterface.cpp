@@ -13,30 +13,30 @@ string metodosInterface::ingresarNumeros()
 			cout << asciiChar;						// Se imprime el valor
 			num = num + to_string(asciiChar);		// Convertir de Int a String para poder concatenar
 		}
-		else if (asciiChar == 13)					// Verificar� si la ultima tecla pulsada fue "Enter"
+		else if (asciiChar == 13)					// Verificará si la ultima tecla pulsada fue "Enter"
 		{
 			if (num == "")
 			{
-				PlaySound(TEXT("SystemStart"), NULL, SND_ALIAS | SND_ASYNC);	// Reproducir� el sonido de alerta en caso de que el espacio est� vacio
+				PlaySound(TEXT("SystemStart"), NULL, SND_ALIAS | SND_ASYNC);	// Reproducirá el sonido de alerta en caso de que el espacio está vacio
 			}
 			else
 			{
-				cout << endl;						// Har� un salto de linea
-				break;								// Terminar� el while
+				cout << endl;						// Hará un salto de linea
+				break;								// Terminará el while
 			}
 		}
-		else if (asciiChar == 8)					// Verificar� si la tecla "Backspace" fue pulsada
+		else if (asciiChar == 8)					// Verificará si la tecla "Backspace" fue pulsada
 		{
 			if (num == "")
 			{
-				PlaySound(TEXT("SystemStart"), NULL, SND_ALIAS | SND_ASYNC);	// Reproducir� el sonido de alerta en caso de que el espacio est� vacio
+				PlaySound(TEXT("SystemStart"), NULL, SND_ALIAS | SND_ASYNC);	// Reproducirá el sonido de alerta en caso de que el espacio está vacio
 			}
 			else
 			{
-				cout << '\b';							// Mover� el cursor un caracter atr�s
-				cout << " ";							// Remplazar� el valor por un espacio
+				cout << '\b';							// Moverá el cursor un caracter atrás
+				cout << " ";							// Remplazará el valor por un espacio
 				cout << '\b';
-				num = num.substr(0, num.size() - 1);	// Borrar� el ultimo valor del string
+				num = num.substr(0, num.size() - 1);	// Borrará el ultimo valor del string
 			}
 			
 		}
@@ -58,45 +58,45 @@ string metodosInterface::ingresarSecuenciaNumeros()
 			cout << asciiChar;						// Se imprime el valor
 			num = num + to_string(asciiChar);		// Convertir de Int a String para poder concatenar
 		}
-		else if (asciiChar == 32)					// Verificar� si la tecla "espacio" fue pulsada
+		else if (asciiChar == 32)					// Verificará si la tecla "espacio" fue pulsada
 		{
-			if (num == "")							// Verificar� si espacio no tiene digitos
+			if (num == "")							// Verificará si espacio no tiene digitos
 			{
 				PlaySound(TEXT("SystemStart"), NULL, SND_ALIAS | SND_ASYNC);
 			}
-			else if (num.back() == ' ')				// Si el ultimo caracter es un "espacio" no ingresar� otro hasta que ingrese un nuevo digito
+			else if (num.back() == ' ')				// Si el ultimo caracter es un "espacio" no ingresará otro hasta que ingrese un nuevo digito
 			{
 				PlaySound(TEXT("SystemStart"), NULL, SND_ALIAS | SND_ASYNC);
 			}
 			else
 			{
-				// Agregar� un espacio a la variable y a la consola
+				// Agregará un espacio a la variable y a la consola
 				num = num + " ";
 				cout << " ";
 			}
 		}
-		else if (asciiChar == 13)					// Verificar� si la ultima tecla pulsada fue "Enter"
+		else if (asciiChar == 13)					// Verificará si la ultima tecla pulsada fue "Enter"
 		{
 			if (num == "")
 			{
-				PlaySound(TEXT("SystemStart"), NULL, SND_ALIAS | SND_ASYNC);	// Reproducir� el sonido de alerta en caso de que el espacio est� vacio
+				PlaySound(TEXT("SystemStart"), NULL, SND_ALIAS | SND_ASYNC);	// Reproducirá el sonido de alerta en caso de que el espacio está vacio
 			}
 			else
 			{
-				cout << endl;						// Har� un salto de linea
-				break;								// Terminar� el while
+				cout << endl;						// Hará un salto de linea
+				break;								// Terminará el while
 			}
 		}
 		else if (asciiChar == 8 && num == "")
 		{
-			PlaySound(TEXT("SystemStart"), NULL, SND_ALIAS | SND_ASYNC);	// Reproducir� el sonido de alerta en caso de que el espacio est� vacio
+			PlaySound(TEXT("SystemStart"), NULL, SND_ALIAS | SND_ASYNC);	// Reproducirá el sonido de alerta en caso de que el espacio está vacio
 		}
-		else if (asciiChar == 8)					// Har� la funcion del Backspace
+		else if (asciiChar == 8)					// Hará la funcion del Backspace
 		{
-			cout << '\b';							// Mover� el cursor un caracter atr�s
-			cout << " ";							// Remplazar� el valor por un espacio
+			cout << '\b';							// Moverá el cursor un caracter atrás
+			cout << " ";							// Remplazará el valor por un espacio
 			cout << '\b';
-			num = num.substr(0, num.size() - 1);	// Borrar� el ultimo valor del string
+			num = num.substr(0, num.size() - 1);	// Borrará el ultimo valor del string
 		}
 	} while (1);
 
@@ -178,7 +178,7 @@ void metodosInterface::pageFaults(int* secuencia, int marcos)
 
 	cout << endl << "El o los algoritmos mas eficientes son: ";
 	for (const auto& pair : algoritmos) {
-		if (pair.first == algoritmos.begin()->first) {
+		if (pair.first == algoritmos.begin() -> first) {
 			cout << pair.second;
 		}
 		else {

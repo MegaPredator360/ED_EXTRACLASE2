@@ -3,7 +3,7 @@
 int main()
 {
 	// Metodo para poder mostrar caracteres especiales en consola
-	setlocale(LC_ALL, "");
+	SetConsoleOutputCP(CP_UTF8);
 
 	// Llamado a la clase de interfaz
 	interfaz _interfaz;

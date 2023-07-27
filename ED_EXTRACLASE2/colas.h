@@ -2,16 +2,16 @@
 
 class colas {
 public:
-	// Se agregar la secuencia de n�meros a la cola
+	// Se agregar la secuencia de números a la cola
 	void agregarNum(const int&);
 
-	// Contar� la cantidad de digitos ingresados en la cola
+	// Contará la cantidad de digitos ingresados en la cola
 	int cantidadNum();
 
-	// Obtendr� el elemento en la primera posici�n de la cola
+	// Obtendrá el elemento en la primera posición de la cola
 	int obtenerPrimerNum();
 
-	// Se elimina la secuencia de n�meros de la cola
+	// Se elimina la secuencia de números de la cola
 	void eliminarNum();
 
 private:
