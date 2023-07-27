@@ -6,7 +6,6 @@
 #include <stack>			// Para poder realizar listas en pilas
 #include <Windows.h>		// Libreria de C++ exclusiva para Windows
 #include <unordered_set>	// Para hacer uso del "unordened_set"
-#include <map>
 
 #pragma comment (lib, "winmm.lib")	// Vincular las funciones multimedia de Windows con el programa
 

@@ -11,9 +11,15 @@ public:
 	// Obtendrá el elemento en la primera posición del optimo
 	int obtenerPrimerNum();
 
-	// Se elimina el elemento del optimo
-	void eliminarNum();
+	// Se obtiene los elementos del vector
+	vector<int> obtenerDatos();
+
+	// Se cambia de digito basado en la posicion predecida
+	void cambiarDato(int, int);
+
+	// Se eliminan todos los datos del vector en caso de ser usado anteriormente
+	void eliminarDatos();
 
 private:
-	queue<int> optimo;
+	vector<int> optimo;
 };

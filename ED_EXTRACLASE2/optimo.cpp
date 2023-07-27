@@ -1,7 +1,7 @@
 #include "optimo.h"
 
 void optimo::agregarNum(const int& dig) {
-    optimo.push(dig);
+    optimo.push_back(dig);
 }
 
 int optimo::cantidadNum() {
@@ -12,6 +12,17 @@ int optimo::obtenerPrimerNum() {
     return optimo.front();
 }
 
-void optimo::eliminarNum() {
-    optimo.pop();
+vector<int> optimo::obtenerDatos()
+{
+    return optimo;
+}
+
+void optimo::cambiarDato(int _p, int _secuencia)
+{
+    optimo[_p] = _secuencia;
+}
+
+void optimo::eliminarDatos()
+{
+    optimo.clear();
 }

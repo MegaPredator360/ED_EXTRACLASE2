@@ -3,14 +3,16 @@
 #include "optimo.h"
 #include "metodosProcedimientos.h"
 
-class procedimientos
+class procedimientos: public metodosProcedimientos
 {
 private:
 	// Llamados a clases
 	colas _cola;
 	pilas _pila;
 	optimo _optimo;
-	metodosProcedimientos _metodosProcedimiento;
+
+	vector<int> auxiliar;
+	unordered_set<int> set;
 
 public:
 	// Metodo para convertir la secuencia de un String a un array de Int
@@ -23,6 +25,6 @@ public:
 	int pageFaultsLIFO(int*, int);
 
 	// Metodo para hacer el proceso de page-faults en colas (optimo)
-	int optimalPage(int*, int);
+	int pageFaultsOptimal(int*, int);
 };
 

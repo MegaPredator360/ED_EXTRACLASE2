@@ -14,6 +14,9 @@ public:
 	// Se elimina el elemento de la pila
 	void eliminarNum();
 
+	// Se eliminan los datos de la pila en caso de ser usado anteriormente
+	void eliminarDatos();
+
 private:
 	stack<int> pila;
 };

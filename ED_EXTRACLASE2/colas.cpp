@@ -19,3 +19,11 @@ void colas::eliminarNum()
 {
     cola.pop();
 }
+
+void colas::eliminarDatos() // Mientras la cola no este vacia, irá eliminando cada dato
+{
+    while (!cola.empty())
+    {
+        cola.pop();
+    }
+}

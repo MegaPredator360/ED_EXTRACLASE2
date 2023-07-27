@@ -19,3 +19,11 @@ void pilas::eliminarNum()
 {
     pila.pop();                 // Elimina el elemento en la parte superior de la pila
 }
+
+void pilas::eliminarDatos()
+{
+    while (!pila.empty())       // Mientras la pila no este vacia, irá eliminando cada dato
+    {
+        pila.pop();
+    }
+}

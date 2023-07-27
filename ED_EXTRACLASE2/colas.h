@@ -14,6 +14,9 @@ public:
 	// Se elimina la secuencia de números de la cola
 	void eliminarNum();
 
+	// Se eliminarán los datos de la cola en caso de ser usado anteriormente
+	void eliminarDatos();
+
 private:
 	queue<int> cola;
 };

@@ -160,30 +160,80 @@ string metodosInterface::confirmacionDefS()			// Utiliza la misma estructura que
 	return (letra);
 }
 
+int metodosInterface::númeroMinimo(int _a, int _b, int _c)
+{
+	int valorMinimo = _a;
+
+	// Si _b es menor que _a, se valorMinimo pasa a contener el valor de _b
+	if (_b < valorMinimo) 
+	{
+		valorMinimo = _b;
+	}
+
+	// Si _c es menor que _b, se valorMinimo pasa a contener el valor de _c
+	if (_c < valorMinimo)
+	{
+		valorMinimo = _c;
+	}
+
+	return valorMinimo;
+}
+
 void metodosInterface::pageFaults(int* secuencia, int marcos)
 {
-	int page_faultsFIFO = _procedimientos.pageFaultsFIFO(secuencia, marcos);
-	cout << "Page-faults: " << page_faultsFIFO << endl;
+	try
+	{
+		// Se limpiará el vector con los resultados en caso de ser usado anteriormente
+		algoritmosEficientes.clear();
 
-	int page_faultsLIFO = _procedimientos.pageFaultsLIFO(secuencia, marcos);
-	cout << "Page-faults: " << page_faultsLIFO << endl;
+		page_faultsFIFO = _procedimientos.pageFaultsFIFO(secuencia, marcos);
+		cout << "Page-faults: " << page_faultsFIFO << endl;
 
-	int page_faultsOptimal = _procedimientos.optimalPage(secuencia, marcos);
-	cout << "Page-faults: " << page_faultsOptimal << endl;
+		page_faultsLIFO = _procedimientos.pageFaultsLIFO(secuencia, marcos);
+		cout << "Page-faults: " << page_faultsLIFO << endl;
 
-	map<int, string> algoritmos;
-	algoritmos[page_faultsFIFO] = "FIFO";
-	algoritmos[page_faultsLIFO] = "LIFO";
-	algoritmos[page_faultsOptimal] = "Óptimo";
+		page_faultsOptimal = _procedimientos.pageFaultsOptimal(secuencia, marcos);
+		cout << "Page-faults: " << page_faultsOptimal << endl;
 
-	cout << endl << "El o los algoritmos mas eficientes son: ";
-	for (const auto& pair : algoritmos) {
-		if (pair.first == algoritmos.begin() -> first) {
-			cout << pair.second;
+		int valorMinimo = númeroMinimo(page_faultsFIFO, page_faultsLIFO, page_faultsOptimal);
+
+		// Se averiguará si hay más de un valor minimo de los resultados de page_fault
+		if (valorMinimo == page_faultsFIFO)
+		{
+			algoritmosEficientes.push_back("FIFO");
 		}
-		else {
-			cout << ", " << pair.second;
+
+		if (valorMinimo == page_faultsLIFO)
+		{
+			algoritmosEficientes.push_back("LIFO");
+		}
+
+		if (valorMinimo == page_faultsOptimal)
+		{
+			algoritmosEficientes.push_back("Optimo");
+		}
+
+
+		// Se le dará al usuario el resultado del algoritmo
+		if (algoritmosEficientes.size() == 1)
+		{
+			cout << endl << "El algoritmo más eficiente fue: " << algoritmosEficientes[0] << "." << endl;
+		}
+		else
+		{
+			cout << endl << "Los algoritmos más eficientes fueron: ";
+
+			for (int i = 0; i < algoritmosEficientes.size(); ++i) 
+			{
+				cout << algoritmosEficientes[i] << ", ";
+			}
+			cout << '\b' << '\b' << "." << endl;
 		}
 	}
-	cout << endl;
+	catch (exception& e)
+	{
+		throw e;
+	}
 }
+
+
