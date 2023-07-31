@@ -22,7 +22,7 @@ Para la ejecución de este programa se necesita un editor como Visual Studio Com
 
 Para Visual Studio Community 2022 necesitas tener descargado la carga de trabajo **Desarrollo para el escritorio con C++**, ya con esto será suficiente para poder ejecutar el programa.
 
-![VSWorkloads](https://github.com/MegaPredator360/ED_EXTRACLASE2/assets/48075699/9c66f062-e5f0-4618-8d0f-b274f8914515)
+![VSWorkloads](https://raw.githubusercontent.com/MegaPredator360/ED_EXTRACLASE2/assets/48075699/9c66f062-e5f0-4618-8d0f-b274f8914515)
 
 En el caso de Visual Studio Code necesitas tener instalado en tu computadora un compilador de C++ que te permita correr el programa, los más recomendados son [g++](https://www.msys2.org/) o [clang](https://clang.llvm.org/get_started.html).
 
